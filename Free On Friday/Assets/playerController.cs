@@ -6,10 +6,12 @@ using UnityEngine.InputSystem;
 public class playerController : MonoBehaviour
 {
     Vector2 movementInput;
+    Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2d>();
     }
 
     // Update is called once per frame
