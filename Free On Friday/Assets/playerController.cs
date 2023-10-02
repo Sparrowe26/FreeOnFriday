@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
 {
@@ -25,8 +26,9 @@ public class playerController : MonoBehaviour
         }
     }
 
-   /* void OnMove(InputValue moveValue)
+    void onMove(InputValue moveValue)
     {
         movementInput = moveValue.Get<Vector2>();
-    }*/
+    }
+ 
 }
