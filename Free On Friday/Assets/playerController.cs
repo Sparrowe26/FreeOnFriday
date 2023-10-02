@@ -25,8 +25,8 @@ public class playerController : MonoBehaviour
         }
     }
 
-    void OnMove(InputValue moveValue)
+   /* void OnMove(InputValue moveValue)
     {
         movementInput = moveValue.Get<Vector2>();
-    }
+    }*/
 }
