@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0.05
-  moveSpeed: 1
+  moveSpeed: 5
   movementFilter:
     useTriggers: 0
     useLayerMask: 0
