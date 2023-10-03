@@ -9,8 +9,9 @@ public class playerController : MonoBehaviour
     Vector2 movementInput;
     Rigidbody2D rb;
     public float offset = 0.05f;
-    public float moveSpeed;
+    public float moveSpeed = 1f;
     public ContactFilter2D movementFilter;
+
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
 
@@ -20,17 +21,22 @@ public class playerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     private void FixedUpdate()
     {
-        if(movementInput != Vector2.zero)
+        if(movementInput != Vector2.zero)  
         {
-            rb.Cast(movementInput, movementFilter, castCollisions, moveSpeed * Time.fixedDeltaTime * offset);
+            //check for collisions
+            int count = rb.Cast(movementInput, movementFilter, castCollisions, moveSpeed * Time.fixedDeltaTime * offset);
+
+            if(count==0)
+            {
+                //move
+                rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+            }
+
+            
         }
     }
 
