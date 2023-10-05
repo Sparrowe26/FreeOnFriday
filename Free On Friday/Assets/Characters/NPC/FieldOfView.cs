@@ -46,16 +46,20 @@ public class FieldOfView : MonoBehaviour
         {
             // take each transform for all targets in radius
             Transform target = targetsInViewRadius[i].transform;
+            // issue with some hitboxes being too long as the player transform.position is too high on the model when compared to the hitbox
+            // BoxCollider2D targetCol = targetsInViewRadius[i].GetComponent<BoxCollider2D>();
             Vector2 dirToTarget = (target.position - transform.position).normalized;
+            float dstToTarget = Vector2.Distance(transform.position, target.position);
 
             // check if it is in front of npc viewangle
             if (Vector2.Angle(transform.up, dirToTarget) < viewAngle / 2)
             {
-                float dstToTarget = Vector3.Distance(transform.position, target.position);
-                RaycastHit2D hit = Physics2D.Linecast(transform.position, target.position, obstabcleMask);
+                // raycast only works to a point, may need to switch it up to work with an entire hitbox for the whole character
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstabcleMask);
 
                 if (!hit.collider)
                 {
+                    // add to list of visible targets
                     visibleTargets.Add(target);
                     spriteRend.color = Color.red;
                 }
