@@ -26,18 +26,42 @@ public class playerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(movementInput != Vector2.zero)  
+        if(movementInput != Vector2.zero)
         {
-            //check for collisions
-            int count = rb.Cast(movementInput, movementFilter, castCollisions, moveSpeed * Time.fixedDeltaTime + offset);
+            bool success = TryMove(movementInput);
 
-            if(count==0)
+            if (!success)
             {
-                //move
-                rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+                success = TryMove(new Vector2(movementInput.x, 0));
+                
+                if (!success)
+                {
+                    success = TryMove(new Vector2(0, movementInput.y));
+                }
             }
 
-            
+
+        }
+    }
+
+    private bool TryMove(Vector2 direction)
+    {
+        //check for collisions
+        int count = rb.Cast(
+            direction, 
+            movementFilter, 
+            castCollisions, 
+            moveSpeed * Time.fixedDeltaTime + offset);
+
+        if(count==0)
+        {
+            //move
+            rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
