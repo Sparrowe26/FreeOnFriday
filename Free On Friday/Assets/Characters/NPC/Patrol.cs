@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -22,15 +24,16 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((transform.position != patrolPoints[currentPointIndex].position))
+        if(transform.position != patrolPoints[currentPointIndex].position)
         {
            
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
-           
+            
+
         }
         else
         {
-            
+           
             if (once==false)
             {
                 once = true;
