@@ -12,10 +12,12 @@ public class FieldOfView : MonoBehaviour
     public LayerMask obstabcleMask;
 
     public List<Transform> visibleTargets = new List<Transform>();
+    private SpriteRenderer spriteRend;
 
     // Start is called before the first frame update
     void Start()
     {
+        spriteRend = GetComponent<SpriteRenderer>();
         StartCoroutine("FindTargetsWithDelay", .05f);
     }
 
@@ -34,8 +36,9 @@ public class FieldOfView : MonoBehaviour
     /// </summary>
     void FindVisibleTargets()
     {
-        // clear list every new frame
+        // clear list and set color to white every new frame
         visibleTargets.Clear();
+        spriteRend.color = Color.white;
         // add all targets within a circle of radius viewdst around npc
         Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewDst, targetMask);
 
@@ -49,10 +52,12 @@ public class FieldOfView : MonoBehaviour
             if (Vector2.Angle(transform.up, dirToTarget) < viewAngle / 2)
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
+                RaycastHit2D hit = Physics2D.Linecast(transform.position, target.position, obstabcleMask);
 
-                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstabcleMask))
+                if (!hit.collider)
                 {
                     visibleTargets.Add(target);
+                    spriteRend.color = Color.red;
                 }
             }
         }
