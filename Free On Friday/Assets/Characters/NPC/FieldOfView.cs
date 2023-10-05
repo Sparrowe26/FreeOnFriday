@@ -48,8 +48,9 @@ public class FieldOfView : MonoBehaviour
             Transform target = targetsInViewRadius[i].transform;
             // issue with some hitboxes being too long as the player transform.position is too high on the model when compared to the hitbox
             // BoxCollider2D targetCol = targetsInViewRadius[i].GetComponent<BoxCollider2D>();
-            Vector2 dirToTarget = (target.position - transform.position).normalized;
-            float dstToTarget = Vector2.Distance(transform.position, target.position);
+            BoxCollider2D targetCollider = target.GetComponent<BoxCollider2D>();
+            Vector2 dirToTarget = ((target.position + (Vector3) targetCollider.offset) - transform.position).normalized;
+            float dstToTarget = Vector2.Distance(transform.position, (target.position + (Vector3)targetCollider.offset));
 
             // check if it is in front of npc viewangle
             if (Vector2.Angle(transform.up, dirToTarget) < viewAngle / 2)
