@@ -15,7 +15,8 @@ public class Patrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+         currentPointIndex = 0;
+        once = false;
     }
 
     // Update is called once per frame
@@ -23,11 +24,14 @@ public class Patrol : MonoBehaviour
     {
         if ((transform.position != patrolPoints[currentPointIndex].position))
         {
+           
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+           
         }
         else
         {
-            if(once==false)
+            
+            if (once==false)
             {
                 once = true;
                 StartCoroutine(Wait());
@@ -36,19 +40,20 @@ public class Patrol : MonoBehaviour
 
         }
 
-        IEnumerator Wait()
-        {
-            yield return new WaitForSeconds(waitTime);
-            if(currentPointIndex + 1 < patrolPoints.Length) 
-            {
-                currentPointIndex++;
-            }
-            else
-            {
-                currentPointIndex = 0;
-            }
-            once = false;
-        }
+      
         
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(waitTime);
+        if (currentPointIndex + 1 < patrolPoints.Length)
+        {
+            currentPointIndex++;
+        }
+        else
+        {
+            currentPointIndex = 0;
+        }
+        once = false;
     }
 }
