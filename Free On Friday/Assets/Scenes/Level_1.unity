@@ -393,11 +393,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df0995a488a854419c080ac9da42caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
   patrolPoints:
   - {fileID: 1463640253}
   - {fileID: 1971721121}
-  waitTime: 0.5
+  waitTime: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
