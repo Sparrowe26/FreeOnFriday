@@ -12,6 +12,7 @@ public class interactor : MonoBehaviour
     void Start()
     {
         colliderBox = GetComponent<Collider2D>();
+       
     }
 
     // Update is called once per frame
