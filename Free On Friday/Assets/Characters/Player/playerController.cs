@@ -20,6 +20,9 @@ public class playerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
        
+        //stops player from colliding with interactables
+
+        movementFilter.SetLayerMask(LayerMask.GetMask("interactable"));
     }
 
   
