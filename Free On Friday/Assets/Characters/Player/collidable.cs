@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 
 public class collidable : MonoBehaviour
@@ -22,8 +23,13 @@ public class collidable : MonoBehaviour
         colliderBox.OverlapCollider(filter, collidedObj);
         foreach (var o in collidedObj)
         {
-            Debug.Log(o.name);
+            OnCollide(o.gameObject);
         }
+    }
+
+    private void OnCollide(GameObject collidedObj)
+    {
+
     }
 }
 
