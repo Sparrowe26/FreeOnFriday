@@ -22,7 +22,7 @@ public class playerController : MonoBehaviour
        
         //stops player from colliding with interactables
 
-        movementFilter.SetLayerMask(LayerMask.GetMask("interactable"));
+       // movementFilter.SetLayerMask(LayerMask.GetMask("hgjvbasdfijkulgasdfguil"));
     }
 
   
