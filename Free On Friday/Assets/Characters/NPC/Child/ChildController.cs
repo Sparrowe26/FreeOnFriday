@@ -11,4 +11,9 @@ public class ChildController : MonoBehaviour
     {
         return new Vector2(Mathf.Sin(angleDeg * Mathf.Deg2Rad), Mathf.Cos(angleDeg * Mathf.Deg2Rad));
     }
+
+    private void Update()
+    {
+        transform.Rotate(0, 0, 10 * Time.deltaTime);
+    }
 }

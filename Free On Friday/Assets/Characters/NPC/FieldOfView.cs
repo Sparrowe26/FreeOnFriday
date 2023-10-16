@@ -94,13 +94,14 @@ public class FieldOfView : MonoBehaviour
     /// </summary>
     void DrawFieldOfView()
     {
+        // how many points on the curve the fov drawn arc is
         int stepCount = Mathf.RoundToInt(viewAngle * meshRes);
         float stepAngleSize = viewAngle / stepCount;
         List<Vector2> viewPoints = new List<Vector2>();
 
         for (int i = 0; i < stepCount; i++)
         {
-            float angle = transform.eulerAngles.y - viewAngle / 2 + stepAngleSize * i;
+            float angle = -transform.eulerAngles.z - viewAngle / 2 + stepAngleSize * i;
             ViewCastInfo newViewCast = ViewCast(angle);
             viewPoints.Add(newViewCast.point);
         }
