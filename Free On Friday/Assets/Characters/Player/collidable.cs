@@ -13,11 +13,13 @@ public class collidable : MonoBehaviour
     private Collider2D colliderBox;
     [SerializeField] private ContactFilter2D filter;
     private List<Collider2D> collidedObj = new List<Collider2D>(1);
-
+    private SpriteRenderer spriteRend;
 
     protected virtual void Start()
     {
         colliderBox = GetComponent<Collider2D>();
+        spriteRend = GetComponent<SpriteRenderer>();
+
 
     }
 
@@ -35,6 +37,7 @@ public class collidable : MonoBehaviour
     protected virtual void OnCollide(GameObject collidedObj)
     {
         Debug.Log(collidedObj.name);
+        spriteRend.color = Color.red;
     }
 }
 
