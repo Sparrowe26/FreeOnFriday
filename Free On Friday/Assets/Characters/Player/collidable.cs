@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -13,13 +14,16 @@ public class collidable : MonoBehaviour
     private Collider2D colliderBox;
     [SerializeField] private ContactFilter2D filter;
     private List<Collider2D> collidedObj = new List<Collider2D>(1);
-    private SpriteRenderer spriteRend;
+    protected SpriteRenderer spriteRend;
+    [SerializeField]
+    protected GameObject text;
+
 
     protected virtual void Start()
     {
         colliderBox = GetComponent<Collider2D>();
         spriteRend = GetComponent<SpriteRenderer>();
-
+        text.SetActive(false);
 
     }
 
@@ -27,17 +31,20 @@ public class collidable : MonoBehaviour
 
     protected virtual void Update()
     {
+        text.SetActive(false);
         colliderBox.OverlapCollider(filter, collidedObj);
         foreach (var o in collidedObj)
         {
             OnCollide(o.gameObject);
         }
+       
     }
 
     protected virtual void OnCollide(GameObject collidedObj)
     {
         Debug.Log(collidedObj.name);
         spriteRend.color = Color.red;
+        
     }
 }
 
