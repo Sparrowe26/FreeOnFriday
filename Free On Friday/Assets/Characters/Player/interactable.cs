@@ -1,12 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class interactable : collidable
 {
-    // Start is called before the first frame update
-    
+    protected override void OnCollide(GameObject collidedObj)
+    {
+        if(Input.GetKey(KeyCode.E))
+        {
+            onInteract();
+        }
 
-    // Update is called once per frame
-  
+
+    }
+
+    private void onInteract()
+    {
+        Debug.Log("inter");
+    }
+
+
 }
