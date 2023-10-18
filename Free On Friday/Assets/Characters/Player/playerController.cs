@@ -13,12 +13,13 @@ public class playerController : MonoBehaviour
     public ContactFilter2D movementFilter;
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-
+    public bool hasKey;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        hasKey = false;
        
         //stops player from colliding with interactables
 

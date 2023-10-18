@@ -17,14 +17,14 @@ public class collidable : MonoBehaviour
     protected SpriteRenderer spriteRend;
     [SerializeField]
     protected GameObject text;
-
+    protected GameObject Player;
 
     protected virtual void Start()
     {
         colliderBox = GetComponent<Collider2D>();
         spriteRend = GetComponent<SpriteRenderer>();
         text.SetActive(false);
-
+        Player = GameObject.Find("StandinPlayer");
     }
 
     // Update is called once per frame
