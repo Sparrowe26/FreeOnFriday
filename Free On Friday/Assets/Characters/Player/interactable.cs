@@ -7,20 +7,42 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class interactable : collidable
 {
-
+    [SerializeField] bool isKey;
+    [SerializeField] bool isDoor;
     bool interacted = false;
 
     protected override void OnCollide(GameObject collidedObj)
     {
-        text.SetActive(true);
-        if (Input.GetKey(KeyCode.E))
+        if(collidedObj.name == "StandinPlayer" )
         {
+            text.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
+            {
 
-            
-            Debug.Log(collidedObj.name);
-            Player.GetComponent<playerController>().hasKey = true;
-            onInteract();
+
+
+
+                if (isKey)
+                {
+                    Player.GetComponent<playerController>().hasKey = true;
+                }
+
+                if(isDoor)
+                {
+                    if(Player.GetComponent<playerController>().hasKey)
+                    {
+                        onInteract();
+                    }
+                }
+                else
+                {
+                    onInteract();
+                }
+
+                
+            }
         }
+        
 
 
     }
@@ -30,7 +52,7 @@ public class interactable : collidable
         if(!interacted)
         {
             
-            Debug.Log("inter");
+           
             spriteRend.gameObject.SetActive(false);
             interacted = true;
         }
