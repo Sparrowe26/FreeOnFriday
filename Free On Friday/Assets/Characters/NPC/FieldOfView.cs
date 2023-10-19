@@ -97,7 +97,7 @@ public class FieldOfView : MonoBehaviour
         // how many points on the curve the fov drawn arc is
         int stepCount = Mathf.RoundToInt(viewAngle * meshRes);
         float stepAngleSize = viewAngle / stepCount;
-        List<Vector2> viewPoints = new List<Vector2>();
+        List<Vector3> viewPoints = new List<Vector3>();
 
         for (int i = 0; i < stepCount; i++)
         {
@@ -110,7 +110,7 @@ public class FieldOfView : MonoBehaviour
         Vector3[] vertices = new Vector3[vertexCount];
         int[] triangles = new int[(vertexCount - 2) * 3];
 
-        vertices[0] = Vector2.zero;
+        vertices[0] = Vector3.zero;
         for (int i = 0; i < vertexCount - 1; i++)
         {
             vertices[i + 1] = transform.InverseTransformPoint(viewPoints[i]);
