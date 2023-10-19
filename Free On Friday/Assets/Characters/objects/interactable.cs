@@ -11,7 +11,6 @@ public class interactable : collidable
     [SerializeField] bool isDoor;
     bool interacted = false;
 
-    //does interactions when player is near
     protected override void OnCollide(GameObject collidedObj)
     {
         if(collidedObj.name == "StandinPlayer")
@@ -44,13 +43,12 @@ public class interactable : collidable
 
     }
 
-    //deactivates interacted object
     private void onInteract()
     {
         if(!interacted)
         {
             
-           
+            Debug.Log("inter");
             spriteRend.gameObject.SetActive(false);
             interacted = true;
         }
