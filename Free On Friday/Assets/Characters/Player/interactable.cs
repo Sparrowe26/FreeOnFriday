@@ -12,13 +12,18 @@ public class interactable : collidable
 
     protected override void OnCollide(GameObject collidedObj)
     {
-        text.SetActive(true);
-        if (Input.GetKey(KeyCode.E))
+        if(collidedObj.name == "StandinPlayer")
         {
-            Debug.Log(collidedObj.name);
-            Player.GetComponent<playerController>().hasKey = true;
-            onInteract();
+            text.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
+            {
+                Debug.Log(collidedObj.name);
+                Player.GetComponent<playerController>().hasKey = true;
+                onInteract();
+            }
         }
+        
+        
 
 
     }
