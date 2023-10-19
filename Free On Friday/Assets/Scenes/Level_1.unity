@@ -1087,6 +1087,8 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 1628140666}
+  isKey: 1
+  isDoor: 0
 --- !u!1 &665460210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1402,8 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 1217748818}
+  isKey: 0
+  isDoor: 1
 --- !u!61 &792730688
 BoxCollider2D:
   m_ObjectHideFlags: 0
