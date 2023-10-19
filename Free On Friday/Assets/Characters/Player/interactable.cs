@@ -15,8 +15,6 @@ public class interactable : collidable
         text.SetActive(true);
         if (Input.GetKey(KeyCode.E))
         {
-
-            
             Debug.Log(collidedObj.name);
             Player.GetComponent<playerController>().hasKey = true;
             onInteract();
