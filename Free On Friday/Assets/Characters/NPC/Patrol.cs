@@ -17,6 +17,7 @@ public class Patrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         
          currentPointIndex = 0;
         once = false;
     }
@@ -27,7 +28,7 @@ public class Patrol : MonoBehaviour
         if(transform.position != patrolPoints[currentPointIndex].position)
         {
            
-            transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
             
 
         }
