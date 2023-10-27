@@ -14,12 +14,14 @@ public class playerController : MonoBehaviour
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public bool hasKey;
+    public bool hasPic;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         hasKey = false;
+        hasPic = false;
        
         //stops player from colliding with interactables
 

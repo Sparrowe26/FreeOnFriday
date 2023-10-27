@@ -20,6 +20,9 @@ public class interactable : collidable
             if (Input.GetKey(KeyCode.E))
             {
 
+
+
+
                 if (isKey)
                 {
                     Player.GetComponent<playerController>().hasKey = true;
@@ -54,6 +57,8 @@ public class interactable : collidable
     {
         if(!interacted)
         {
+            
+           
             spriteRend.gameObject.SetActive(false);
             interacted = true;
         }
