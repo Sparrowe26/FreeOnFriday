@@ -821,8 +821,8 @@ GameObject:
   m_Component:
   - component: {fileID: 471884743}
   - component: {fileID: 471884742}
-  - component: {fileID: 471884741}
   - component: {fileID: 471884744}
+  - component: {fileID: 471884745}
   m_Layer: 0
   m_Name: door check
   m_TagString: Untagged
@@ -830,36 +830,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &471884741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471884740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3af19a91b3153548963c07420cfec5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  text: {fileID: 1688825115}
-  isKey: 0
-  isDoor: 1
-  isPic: 0
 --- !u!212 &471884742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -921,8 +891,8 @@ Transform:
   m_GameObject: {fileID: 471884740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.86, y: -0.795, z: 0}
-  m_LocalScale: {x: 2.7625, y: 0.425, z: 1}
+  m_LocalPosition: {x: 1.867, y: -0.795, z: 0}
+  m_LocalScale: {x: 2.7765725, y: 0.425, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1688825118}
@@ -974,6 +944,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &471884745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471884740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5de84f1ec35bcf4ea0bc488fd8a1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  text: {fileID: 1688825115}
+  isPic: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1263,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 563233490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3af19a91b3153548963c07420cfec5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b9b6b5f54409364989450b3bd6f7188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   filter:
@@ -1283,8 +1281,6 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 1628140666}
-  isKey: 1
-  isDoor: 0
   isPic: 0
 --- !u!1 &677630086
 GameObject:
@@ -1365,7 +1361,7 @@ GameObject:
   - component: {fileID: 739009546}
   - component: {fileID: 739009545}
   - component: {fileID: 739009544}
-  - component: {fileID: 739009543}
+  - component: {fileID: 739009547}
   m_Layer: 0
   m_Name: Picture
   m_TagString: Untagged
@@ -1373,36 +1369,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &739009543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739009542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3af19a91b3153548963c07420cfec5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  text: {fileID: 0}
-  isKey: 0
-  isDoor: 0
-  isPic: 1
 --- !u!61 &739009544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1515,6 +1481,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &739009547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739009542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a81ac885c4ac824195830f3fec89faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  text: {fileID: 0}
+  isPic: 0
 --- !u!1 &846818011
 GameObject:
   m_ObjectHideFlags: 0
@@ -16489,7 +16483,7 @@ GameObject:
   - component: {fileID: 2114916824}
   - component: {fileID: 2114916827}
   - component: {fileID: 2114916826}
-  - component: {fileID: 2114916825}
+  - component: {fileID: 2114916828}
   m_Layer: 0
   m_Name: child interact
   m_TagString: Untagged
@@ -16515,36 +16509,6 @@ Transform:
   - {fileID: 164409911}
   m_Father: {fileID: 963949151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2114916825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114916823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3af19a91b3153548963c07420cfec5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  text: {fileID: 846818011}
-  isKey: 0
-  isDoor: 0
-  isPic: 0
 --- !u!61 &2114916826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16642,6 +16606,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2114916828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114916823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b581cf4945f988b4fb94d1210ee4996c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  text: {fileID: 846818011}
+  isPic: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

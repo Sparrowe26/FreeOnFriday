@@ -10,7 +10,6 @@ public class interactDoor : interactable
         {
             if (Player.GetComponent<playerController>().hasKey)
             {
-                
 
                 spriteRend.gameObject.SetActive(false);
                 interacted = true;
