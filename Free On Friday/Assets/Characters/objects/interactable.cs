@@ -16,7 +16,8 @@ public class interactable : collidable
     {
         if(collidedObj.name == "StandinPlayer" )
         {
-            text.SetActive(true);
+            if (text != null)
+                text.SetActive(true);
             if (Input.GetKey(KeyCode.E))
             {
 
