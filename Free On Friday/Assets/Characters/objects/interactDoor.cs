@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class interactDoor : interactable
 {
+
+   
+
     [SerializeField] public bool isOpen;
     protected override void onInteract()
     {
+        GameObject doorObject = Player.transform.GetChild(0).gameObject;
+       
         if (!interacted)
         {
 
@@ -14,13 +20,15 @@ public class interactDoor : interactable
             {
                 if (Player.GetComponent<playerController>().hasKey)
                 {
-                    //spriteRend.gameObject.SetActive(false);
+                    doorObject.GetComponent<SpriteRenderer>().gameObject.SetActive(false);
                     interacted = true;
                     isOpen = true;
+                    
                 }
             }
             else
             {
+                doorObject.GetComponent<SpriteRenderer>().gameObject.SetActive(true);
                 isOpen = false;
             }
             
