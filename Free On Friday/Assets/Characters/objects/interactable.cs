@@ -9,7 +9,7 @@ public class interactable : collidable
 {
     
    
-    [SerializeField] bool isPic;
+   
     protected bool interacted = false;
 
     protected override void OnCollide(GameObject collidedObj)
@@ -21,16 +21,13 @@ public class interactable : collidable
             if (Input.GetKey(KeyCode.E))
             {
 
-                if (isPic)
-                {
-                    Player.GetComponent<playerController>().hasPic = true;
-                }
+              
 
                
-                else
-                {
+          
+                
                     onInteract();
-                }
+                
 
                 
             }

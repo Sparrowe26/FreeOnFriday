@@ -6,12 +6,13 @@ using UnityEngine;
 public class interactDoor : interactable
 {
 
-   
+    [SerializeField]
+    protected GameObject doorObject;
 
     [SerializeField] public bool isOpen;
     protected override void onInteract()
     {
-        GameObject doorObject = Player.transform.GetChild(0).gameObject;
+        
        
         if (!interacted)
         {
