@@ -15,13 +15,14 @@ public class playerController : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public bool hasKey;
     public bool hasPic;
-
+    public bool canMove;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         hasKey = false;
         hasPic = false;
+        canMove = true;
        
         //stops player from colliding with interactables
 
@@ -32,22 +33,26 @@ public class playerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(movementInput != Vector2.zero)
+        if(canMove)
         {
-            bool success = TryMove(movementInput);
-
-            if (!success)
+            if (movementInput != Vector2.zero)
             {
-                success = TryMove(new Vector2(movementInput.x, 0));
-                
+                bool success = TryMove(movementInput);
+
                 if (!success)
                 {
-                    success = TryMove(new Vector2(0, movementInput.y));
+                    success = TryMove(new Vector2(movementInput.x, 0));
+
+                    if (!success)
+                    {
+                        success = TryMove(new Vector2(0, movementInput.y));
+                    }
                 }
+
+
             }
-
-
         }
+
     }
 
     private bool TryMove(Vector2 direction)

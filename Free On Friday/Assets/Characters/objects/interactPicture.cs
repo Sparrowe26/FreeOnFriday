@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class interactPicture : interactable
 {
+    [SerializeField]
+    protected GameObject UIPic;
     // Start is called before the first frame update
     protected override void onInteract()
     {
@@ -14,6 +17,9 @@ public class interactPicture : interactable
 
             spriteRend.gameObject.SetActive(false);
             interacted = true;
+
+            UIPic.SetActive(true);
+            Player.GetComponent<playerController>().canMove = false;
         }
     }
 }
