@@ -17,6 +17,9 @@ public class FieldOfView : MonoBehaviour
     public float meshRes;
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
+    MeshRenderer meshRend;
+    Material matUndetect;
+    Material matDetect;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,10 @@ public class FieldOfView : MonoBehaviour
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
         spriteRend = GetComponent<SpriteRenderer>();
+        meshRend = viewMeshFilter.GetComponent<MeshRenderer>();
+        Material[] materials = meshRend.materials;
+        matUndetect = materials[1];
+        matDetect = materials[0];
         StartCoroutine("FindTargetsWithDelay", .05f);
     }
 
@@ -74,6 +81,17 @@ public class FieldOfView : MonoBehaviour
                     // add to list of visible targets
                     visibleTargets.Add(target);
                     spriteRend.color = Color.red;
+
+                    // if collided with a valid target change fov color
+                    Material[] materials = meshRend.materials;
+                    materials[1] = matDetect;
+                    meshRend.materials = materials;
+                }
+                else
+                { // if no longer detected
+                    Material[] materials = meshRend.materials;
+                    materials[1] = matUndetect;
+                    meshRend.materials = materials;
                 }
             }
         }
@@ -122,6 +140,9 @@ public class FieldOfView : MonoBehaviour
                 triangles[i * 3 + 2] = i + 2;
             }
         }
+
+       
+
         viewMesh.Clear();
 
         viewMesh.vertices = vertices;
