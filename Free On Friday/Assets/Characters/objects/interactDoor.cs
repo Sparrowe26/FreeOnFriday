@@ -24,7 +24,7 @@ public class interactDoor : interactable
                     doorObject.GetComponent<SpriteRenderer>().gameObject.SetActive(false);
                     interacted = true;
                     isOpen = true;
-                    Invoke("interactDelay()", .2f);
+                    Invoke("interactDelay", .2f);
                 }
             }
             else
