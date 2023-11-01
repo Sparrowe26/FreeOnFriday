@@ -971,7 +971,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 1688825115}
-  isPic: 0
+  doorObject: {fileID: 1496164507}
   isOpen: 0
 --- !u!1 &519420028
 GameObject:
@@ -1282,7 +1282,6 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 1628140666}
-  isPic: 0
 --- !u!1 &677630086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1508,6 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 0}
-  isPic: 0
 --- !u!1 &846818011
 GameObject:
   m_ObjectHideFlags: 0
@@ -16634,7 +16632,6 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 846818011}
-  isPic: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
