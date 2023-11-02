@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Detection : MonoBehaviour
+public class Detection
 {
     //Fields
     int _currentDetection;
@@ -41,6 +41,18 @@ public class Detection : MonoBehaviour
     }
     
     // Methods
+    public void DectectionUnit(int amount)
+    {
+        if (_currentDetection < _currentMaxDetection)
+        {
+            _currentDetection += amount;
+        }
+
+        if (_currentDetection > _currentMaxDetection)
+        {
+            _currentDetection = _currentMaxDetection;
+        }
+    }
     
 
 }

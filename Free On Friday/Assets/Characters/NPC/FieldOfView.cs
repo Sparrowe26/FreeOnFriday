@@ -20,6 +20,9 @@ public class FieldOfView : MonoBehaviour
     MeshRenderer meshRend;
     Material matUndetect;
     Material matDetect;
+    
+    //bool to check if there is something being detected
+    public bool isDetecting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +84,8 @@ public class FieldOfView : MonoBehaviour
                     // add to list of visible targets
                     visibleTargets.Add(target);
                     spriteRend.color = Color.red;
+                    isDetecting = true;
+                    Debug.Log(isDetecting);
 
                     // if collided with a valid target change fov color
                     Material[] materials = meshRend.materials;

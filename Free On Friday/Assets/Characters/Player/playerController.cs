@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -16,6 +17,12 @@ public class playerController : MonoBehaviour
     public bool hasKey;
     public bool hasPic;
     public bool canMove;
+
+    //Instance for the bar to move
+    [SerializeField] DetectionBar _detectionbar;
+
+    public FieldOfView FOV;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +36,16 @@ public class playerController : MonoBehaviour
        // movementFilter.SetLayerMask(LayerMask.GetMask("hgjvbasdfijkulgasdfguil"));
     }
 
-  
+    //Working on getting this to work - Ryan
+    private void Update()
+    {
+        //if (FOV.isDetecting == true)
+        //{
+            //PlayerDetected(50);
+            //Debug.Log(GameManager.gameManager._playerDetection.Detect);
+        //}
+    }
+
 
     private void FixedUpdate()
     {
@@ -79,6 +95,13 @@ public class playerController : MonoBehaviour
     void OnMove(InputValue moveValue)
     {
         movementInput = moveValue.Get<Vector2>();
+    }
+
+    //if player is detected update what is needed
+    private void PlayerDetected(int amount)
+    {
+        GameManager.gameManager._playerDetection.DectectionUnit(amount);
+        _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
     }
  
 }
