@@ -9,10 +9,12 @@ public class interactPicture : interactable
     protected GameObject UIPic;
     // Start is called before the first frame update
     protected bool looking = false;
+    
     protected override void onInteract()
     {
         if (!interacted)
         {
+            
             if (!looking)
             {
                 Player.GetComponent<playerController>().hasPic = true;
