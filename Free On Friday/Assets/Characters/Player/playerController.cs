@@ -18,11 +18,18 @@ public class playerController : MonoBehaviour
     public bool hasPic;
     public bool canMove;
 
+<<<<<<< Updated upstream
     //Instance for the bar to move
     [SerializeField] DetectionBar _detectionbar;
 
     public FieldOfView FOV;
     
+=======
+    // possesion keep track of original sprite
+    public Sprite ogSprite;
+    private SpriteRenderer spriteRenderer;
+    private GameObject possessed;
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +37,8 @@ public class playerController : MonoBehaviour
         hasKey = false;
         hasPic = false;
         canMove = true;
-       
+
+        ogSprite = GetComponent<Sprite>();
         //stops player from colliding with interactables
 
        // movementFilter.SetLayerMask(LayerMask.GetMask("hgjvbasdfijkulgasdfguil"));
@@ -69,6 +77,20 @@ public class playerController : MonoBehaviour
             }
         }
 
+        // allows player to posses
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    if (possessed != null)
+        //    {
+        //        possessed.SetActive(true);
+        //        ResetSprite();
+        //    }
+        //    else
+        //    {
+
+        //    }
+        //}
+
     }
 
     private bool TryMove(Vector2 direction)
@@ -97,6 +119,7 @@ public class playerController : MonoBehaviour
         movementInput = moveValue.Get<Vector2>();
     }
 
+<<<<<<< Updated upstream
     //if player is detected update what is needed
     private void PlayerDetected(int amount)
     {
@@ -104,4 +127,15 @@ public class playerController : MonoBehaviour
         _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
     }
  
+=======
+    public void ResetSprite()
+    {
+        spriteRenderer.sprite = ogSprite;
+    }
+
+    public void ChangeSprite(Sprite newSprite)
+    {
+        spriteRenderer.sprite = newSprite;
+    }
+>>>>>>> Stashed changes
 }

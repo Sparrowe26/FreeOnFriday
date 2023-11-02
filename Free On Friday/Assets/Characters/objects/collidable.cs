@@ -42,14 +42,12 @@ public class collidable : MonoBehaviour
         {
             OnCollide(o.gameObject);
         }
-       
     }
 
     protected virtual void OnCollide(GameObject collidedObj)
     {
         Debug.Log(collidedObj.name);
         spriteRend.color = Color.red;
-        
     }
 }
 
