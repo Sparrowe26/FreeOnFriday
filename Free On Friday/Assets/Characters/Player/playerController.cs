@@ -50,7 +50,7 @@ public class playerController : MonoBehaviour
         //if (FOV.isDetecting == true)
         //{
             //PlayerDetected(50);
-            //Debug.Log(GameManager.gameManager._playerDetection.Detect);
+            Debug.Log(GameManager.gameManager._playerDetection.Detect);
         //}
     }
 
@@ -121,7 +121,7 @@ public class playerController : MonoBehaviour
 
 
     //if player is detected update what is needed
-    private void PlayerDetected(int amount)
+    public void PlayerDetected(int amount)
     {
         GameManager.gameManager._playerDetection.DectectionUnit(amount);
         _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);

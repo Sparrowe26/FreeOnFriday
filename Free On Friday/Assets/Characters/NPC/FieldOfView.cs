@@ -20,9 +20,10 @@ public class FieldOfView : MonoBehaviour
     MeshRenderer meshRend;
     Material matUndetect;
     Material matDetect;
-    
+
     //bool to check if there is something being detected
     public bool isDetecting = false;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class FieldOfView : MonoBehaviour
         Material[] materials = meshRend.materials;
         matUndetect = materials[1];
         matDetect = materials[0];
-        StartCoroutine("FindTargetsWithDelay", .05f);
+        player = GameObject.Find("StandinPlayer");
     }
 
     private void LateUpdate()
@@ -43,13 +44,12 @@ public class FieldOfView : MonoBehaviour
         DrawFieldOfView();
     }
 
-    IEnumerator FindTargetsWithDelay(float delay)
+    private void Update()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(delay);
-            FindVisibleTargets();
-        }
+        isDetecting = false;
+        FindVisibleTargets();
+        if (isDetecting)
+            player.GetComponent<playerController>().PlayerDetected(1);
     }
 
     /// <summary>
@@ -85,7 +85,6 @@ public class FieldOfView : MonoBehaviour
                     visibleTargets.Add(target);
                     spriteRend.color = Color.red;
                     isDetecting = true;
-                    //Debug.Log(isDetecting);
 
                     // if collided with a valid target change fov color
                     Material[] materials = meshRend.materials;
@@ -97,6 +96,7 @@ public class FieldOfView : MonoBehaviour
                     Material[] materials = meshRend.materials;
                     materials[1] = matUndetect;
                     meshRend.materials = materials;
+                    isDetecting = false;
                 }
             }
         }
@@ -145,8 +145,6 @@ public class FieldOfView : MonoBehaviour
                 triangles[i * 3 + 2] = i + 2;
             }
         }
-
-       
 
         viewMesh.Clear();
 
