@@ -21,9 +21,13 @@ public class collidable : MonoBehaviour
 
     protected virtual void Start()
     {
+        if(text != null)
+        {
+            text.SetActive(false);
+        }
         colliderBox = GetComponent<Collider2D>();
         spriteRend = GetComponent<SpriteRenderer>();
-        text.SetActive(false);
+        
         Player = GameObject.Find("StandinPlayer");
     }
 
@@ -31,7 +35,8 @@ public class collidable : MonoBehaviour
 
     protected virtual void Update()
     {
-        text.SetActive(false);
+        if (text != null)
+            text.SetActive(false);
         colliderBox.OverlapCollider(filter, collidedObj);
         foreach (var o in collidedObj)
         {
