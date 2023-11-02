@@ -85,7 +85,7 @@ public class FieldOfView : MonoBehaviour
                     visibleTargets.Add(target);
                     spriteRend.color = Color.red;
                     isDetecting = true;
-                    Debug.Log(isDetecting);
+                    //Debug.Log(isDetecting);
 
                     // if collided with a valid target change fov color
                     Material[] materials = meshRend.materials;
