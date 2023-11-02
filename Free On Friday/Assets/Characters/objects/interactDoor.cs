@@ -39,10 +39,7 @@ public class interactDoor : interactable
         }
     }
 
-    protected void interactDelay()
-    {
-        interacted = false;
-    }
+   
 
     
 }

@@ -44,8 +44,14 @@ public class interactable : collidable
             spriteRend.gameObject.SetActive(false);
             interacted = true;
         }
-        
+
     }
+    protected virtual void interactDelay()
+    {
+        interacted = false;
+    }
+
+
 
 
 }
