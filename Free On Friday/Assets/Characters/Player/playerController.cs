@@ -21,8 +21,8 @@ public class playerController : MonoBehaviour
     //Instance for the bar to move
     [SerializeField] DetectionBar _detectionbar;
 
-    public FieldOfView FOV;
-    
+    [SerializeField] FieldOfView FOV;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,20 +30,20 @@ public class playerController : MonoBehaviour
         hasKey = false;
         hasPic = false;
         canMove = true;
-       
         //stops player from colliding with interactables
 
-       // movementFilter.SetLayerMask(LayerMask.GetMask("hgjvbasdfijkulgasdfguil"));
+        // movementFilter.SetLayerMask(LayerMask.GetMask("hgjvbasdfijkulgasdfguil"));
     }
 
     //Working on getting this to work - Ryan
     private void Update()
     {
-        //if (FOV.isDetecting == true)
-        //{
-            //PlayerDetected(50);
+        if (FOV.isDetecting == true)
+        {
+            PlayerDetected(50);
+            //FOV.isDetecting = false;
             //Debug.Log(GameManager.gameManager._playerDetection.Detect);
-        //}
+        }
     }
 
 
@@ -103,5 +103,5 @@ public class playerController : MonoBehaviour
         GameManager.gameManager._playerDetection.DectectionUnit(amount);
         _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
     }
- 
+
 }
