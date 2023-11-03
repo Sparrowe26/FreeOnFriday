@@ -21,12 +21,12 @@ public class playerController : MonoBehaviour
 
     //Instance for the bar to move
     [SerializeField] DetectionBar _detectionbar;
-
+    [SerializeField] protected GameObject GameoverText;
     public FieldOfView FOV;
-    
+
 
     // possesion keep track of original sprite
-    public Sprite ogSprite;
+    [SerializeField] public Sprite ogSprite;
     private SpriteRenderer spriteRenderer;
     private GameObject possessed;
 
@@ -38,7 +38,7 @@ public class playerController : MonoBehaviour
         hasPic = false;
         canMove = true;
 
-        ogSprite = GetComponent<Sprite>();
+        
         //stops player from colliding with interactables
 
        // movementFilter.SetLayerMask(LayerMask.GetMask("hgjvbasdfijkulgasdfguil"));
@@ -50,7 +50,7 @@ public class playerController : MonoBehaviour
         //if (FOV.isDetecting == true)
         //{
             //PlayerDetected(50);
-            Debug.Log(GameManager.gameManager._playerDetection.Detect);
+            //Debug.Log(GameManager.gameManager._playerDetection.Detect);
         //}
     }
 
@@ -125,12 +125,17 @@ public class playerController : MonoBehaviour
     {
         GameManager.gameManager._playerDetection.DectectionUnit(amount);
         _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
+        /*if(GameManager.gameManager._playerDetection.Detect ==100)
+        {
+            canMove = false;
+            GameoverText.SetActive(true);
+        }*/
     }
  
 
     public void ResetSprite()
     {
-        spriteRenderer.sprite = ogSprite;
+       //spriteRenderer.sprite = ogSprite;
     }
 
     public void ChangeSprite(Sprite newSprite)
