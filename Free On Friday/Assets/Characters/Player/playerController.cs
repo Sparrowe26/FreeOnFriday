@@ -126,11 +126,12 @@ public class playerController : MonoBehaviour
     {
         GameManager.gameManager._playerDetection.DectectionUnit(amount);
         _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
-        /*if(GameManager.gameManager._playerDetection.Detect ==100)
+        if(GameManager.gameManager._playerDetection.Detect ==100)
         {
-            canMove = false;
-            GameoverText.SetActive(true);
-        }*/
+            this.gameObject.transform.position = new Vector3(-4.74f, -2.69f, -2.0f);
+            GameManager.gameManager._playerDetection.Detect = 0;
+            _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
+        }
     }
  
 
