@@ -14,6 +14,6 @@ public class ChildController : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(0, 0, 10 * Time.deltaTime);
+        //transform.Rotate(0, 0, 10 * Time.deltaTime);
     }
 }
