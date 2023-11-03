@@ -11,9 +11,9 @@ using UnityEngine;
 public class collidable : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Collider2D colliderBox;
-    [SerializeField] private ContactFilter2D filter;
-    private List<Collider2D> collidedObj = new List<Collider2D>(1);
+    protected Collider2D colliderBox;
+    [SerializeField] protected ContactFilter2D filter;
+    protected List<Collider2D> collidedObj = new List<Collider2D>(1);
     protected SpriteRenderer spriteRend;
     [SerializeField]
     protected GameObject text;
