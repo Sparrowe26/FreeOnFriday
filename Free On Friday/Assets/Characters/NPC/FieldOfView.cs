@@ -79,7 +79,7 @@ public class FieldOfView : MonoBehaviour
                 // raycast only works to a point, may need to switch it up to work with an entire hitbox for the whole character
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstabcleMask);
 
-                if (!hit.collider)
+                if (!hit.collider && !player.GetComponent<playerController>().possessing)
                 {
                     // add to list of visible targets
                     visibleTargets.Add(target);

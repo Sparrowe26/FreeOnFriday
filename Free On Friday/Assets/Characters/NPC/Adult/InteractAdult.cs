@@ -33,7 +33,8 @@ public class InteractAdult : interactable
                 Player.gameObject.transform.position = this.gameObject.transform.position;
                 spriteRend.enabled = false;
                 interacted = true;
-                possessed = true;
+                possessed = true; 
+                Player.GetComponent<playerController>().possessing = true;
                 Invoke("interactDelay", .2f);
             }
              else
@@ -43,6 +44,7 @@ public class InteractAdult : interactable
                 Player.GetComponent<SpriteRenderer>().sprite = ogSprite;
                 interacted = true;
                 possessed = false;
+                Player.GetComponent<playerController>().possessing = false;
                 Invoke("interactDelay", .2f);
             }
         }

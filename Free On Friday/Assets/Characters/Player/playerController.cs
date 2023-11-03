@@ -29,7 +29,7 @@ public class playerController : MonoBehaviour
     [SerializeField] public Sprite ogSprite;
     private SpriteRenderer spriteRenderer;
     private GameObject possessed;
-
+    public bool possessing;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +37,7 @@ public class playerController : MonoBehaviour
         hasKey = false;
         hasPic = false;
         canMove = true;
+        possessing = false;
 
         
         //stops player from colliding with interactables
