@@ -2095,6 +2095,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 0}
   UIPic: {fileID: 985332586}
+  picked: 0
 --- !u!1 &846818011
 GameObject:
   m_ObjectHideFlags: 0
@@ -17646,6 +17647,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 846818011}
+  pic: {fileID: 739009542}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class interactPicture : interactable
     protected GameObject UIPic;
     // Start is called before the first frame update
     protected bool looking = false;
-    
+    public bool picked;
     protected override void onInteract()
     {
         if (!interacted)
@@ -17,7 +17,7 @@ public class interactPicture : interactable
             
             if (!looking)
             {
-                Player.GetComponent<playerController>().hasPic = true;
+                picked = true;
 
                // spriteRend.gameObject.SetActive(false);
                 interacted = true;
