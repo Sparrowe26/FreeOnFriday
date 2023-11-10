@@ -9,6 +9,10 @@ public class interactDoor : interactable
     [SerializeField]
     protected GameObject doorObject;
 
+
+    [SerializeField]
+    protected GameObject key;
+
     [SerializeField] public bool isOpen;
     protected override void onInteract()
     {
@@ -19,7 +23,7 @@ public class interactDoor : interactable
 
             if (!isOpen)
             {
-                if (Player.GetComponent<playerController>().hasKey)
+                if (key.GetComponent<interactKey>().picked)
                 {
                     doorObject.GetComponent<SpriteRenderer>().gameObject.SetActive(false);
                     interacted = true;

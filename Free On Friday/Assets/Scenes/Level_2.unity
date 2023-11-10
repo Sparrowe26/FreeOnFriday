@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 168499224}
   - component: {fileID: 168499223}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Door detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,6 +501,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 1688825115}
   doorObject: {fileID: 702218046}
+  key: {fileID: 563233490}
   isOpen: 0
 --- !u!61 &168499224
 BoxCollider2D:
@@ -1423,6 +1424,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 1688825115}
   doorObject: {fileID: 702218046}
+  key: {fileID: 0}
   isOpen: 0
 --- !u!1 &519420028
 GameObject:
@@ -1733,6 +1735,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 1628140666}
+  picked: 0
 --- !u!1 &677630086
 GameObject:
   m_ObjectHideFlags: 0
