@@ -35,7 +35,7 @@ public class interactDoor : interactable
             OnCollide(o.gameObject);
         }
 
-
+        //door shake 
         if (shaking)
         {
             var yOffset = .05f;
@@ -43,12 +43,12 @@ public class interactDoor : interactable
             if(up)
             {
                 yOffset = -.01f;
-                //up = false;
+               
             }
             else
             {
                  yOffset = .01f;
-                //up = true;
+                
             }
 
             counter++;
