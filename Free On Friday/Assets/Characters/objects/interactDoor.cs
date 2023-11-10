@@ -7,21 +7,15 @@ using static System.Net.Mime.MediaTypeNames;
 public class interactDoor : interactable
 {
 
-    [SerializeField]
-    protected GameObject doorObject;
 
-
-    [SerializeField]
-    protected GameObject key;
-
+    [SerializeField] protected GameObject doorObject;
+    [SerializeField] protected GameObject key;
     [SerializeField] public bool isOpen;
     
     private bool shaking = false;
     private float timer;
     private float shakeTime = .5f;
-   
     private Vector3 originalPosition;
-
     bool up = false;
     int counter=0;
 
