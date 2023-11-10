@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class interactKid : interactable
 {
+
+
+    [SerializeField] protected GameObject pic;
+
+
     protected override void onInteract()
     {
         if (!interacted)
         {
-            if (Player.GetComponent<playerController>().hasPic)
+            if (pic.GetComponent<interactPicture>().picked)
             {
 
                 spriteRend.gameObject.SetActive(false);
