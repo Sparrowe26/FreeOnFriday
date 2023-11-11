@@ -23,6 +23,21 @@ public class InteractAdult : interactable
         }
     }
 
+
+    protected override void OnCollide(GameObject collidedObj)
+    {
+        if (collidedObj.name == "StandinPlayer")
+        {
+            if (text != null)
+                text.SetActive(true);
+            if (Input.GetKey(KeyCode.Q))
+            {
+
+                onInteract();
+            }
+        }
+    }
+
     protected override void onInteract()
     {
         if (!interacted)
