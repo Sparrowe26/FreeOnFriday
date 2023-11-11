@@ -11,7 +11,11 @@ public class interactDoor : interactable
     [SerializeField] protected GameObject doorObject;
     [SerializeField] protected GameObject key;
     [SerializeField] public bool isOpen;
-    
+
+    // Sound when door is not unlocked yet
+    [SerializeField] public AudioClip shakeSound;
+    [SerializeField] public AudioSource audioSource;
+
     private bool shaking = false;
     private float timer;
     private float shakeTime = .5f;
@@ -61,6 +65,10 @@ public class interactDoor : interactable
                 doorObject.gameObject.transform.position = originalPosition;
                 Invoke("interactDelay", .2f);
             }
+
+            // Plays the shaking sound via the audio source
+            audioSource.PlayOneShot(shakeSound, 1);
+
         }
     }
 
