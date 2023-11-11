@@ -64,10 +64,10 @@ public class interactDoor : interactable
                 shaking = false;
                 doorObject.gameObject.transform.position = originalPosition;
                 Invoke("interactDelay", .2f);
-            }
 
-            // Plays the shaking sound via the audio source
-            audioSource.PlayOneShot(shakeSound, 1);
+                // Plays the shaking sound via the audio source
+                audioSource.PlayOneShot(shakeSound, 1);
+            }
 
         }
     }
