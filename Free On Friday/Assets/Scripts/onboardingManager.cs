@@ -14,14 +14,14 @@ public class onboardingManager : MonoBehaviour
     public GameObject image1;
     public GameObject image2;
     public GameObject image3;
-    //  private bool allowSpace = true;
+   // private IEnumerator coroutine;
+
 
     // initial visibility settings. Any new images or buttons need to also be SetActive(false);
     async void Start()
     {
         // DialogueDisplay.SetActive(false);
         // ArtBG1.SetActive(true);
-        FadeIn(image1);
         image1.SetActive(true);
         image2.SetActive(false);
         image3.SetActive(false);
@@ -52,7 +52,8 @@ public class onboardingManager : MonoBehaviour
         primeInt = primeInt + 1;
         if (primeInt == 1)
         {
-            FadeIn(image2);
+           // coroutine = FadeIn(image2);
+            //StartCoroutine(coroutine);
             image2.SetActive(true);
             //image1.SetActive(true);
             Debug.Log("yuh ran");
@@ -66,18 +67,14 @@ public class onboardingManager : MonoBehaviour
         }
         else if (primeInt == 3)
         {
-            image3.SetActive(true);
-            //gameHandler.AddPlayerStat(1);
-            // Invoke("ButtonAppear1", 3);
             SceneManager.LoadScene(nextScene);
 
         }
 
-        //Please do NOT delete this final bracket that ends the Next() function:
     }
 
-    // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
-    public void FadeIn(GameObject fadeImage)
+    // Work on making these work
+    IEnumerator FadeIn(GameObject fadeImage)
     {
 
         float alphaLevel = 0;
@@ -85,7 +82,7 @@ public class onboardingManager : MonoBehaviour
         for (int i = 0; i < 100; i++)
         {
             alphaLevel += 0.01f;
-            //yield return null;
+            yield return null;
             fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
             Debug.Log("Alpha is: " + alphaLevel);
         }
@@ -104,19 +101,5 @@ public class onboardingManager : MonoBehaviour
         }
     }
 
-    public IEnumerator ButtonDisplay()
-    {
-        nextButton.SetActive(false);
-        Debug.Log("waiting...");
-        yield return new WaitForSeconds(2f);
-        Debug.Log("All done!");
-
-    }
-
-    public void ButtonAppear1()
-    {
-        Debug.Log("invoked method!");
-        nextButton.SetActive(true);
-    }
 }
 
