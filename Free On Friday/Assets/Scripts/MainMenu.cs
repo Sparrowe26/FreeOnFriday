@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     //Load Game into the first level
-    public string nextSceneTitle;
+    public string nextSceneTitle = "Onboarding";
     public void Play()
     {
         SceneManager.LoadScene(nextSceneTitle);
