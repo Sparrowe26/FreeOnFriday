@@ -149,6 +149,11 @@ MonoBehaviour:
   hasKey: 0
   hasPic: 0
   canMove: 0
+  _detectionbar: {fileID: 0}
+  GameoverText: {fileID: 0}
+  FOV: {fileID: 0}
+  ogSprite: {fileID: 0}
+  possessing: 0
 --- !u!50 &1178060526689304906
 Rigidbody2D:
   serializedVersion: 4
