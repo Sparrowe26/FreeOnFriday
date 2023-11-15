@@ -36,21 +36,21 @@ public class interactDoor : interactable
         //door shake 
         if (shaking)
         {
-            var yOffset = .05f;
+            var yOffset = .02f;
 
             if(up)
             {
-                yOffset = -.01f;
+                yOffset = -.02f;
                
             }
             else
             {
-                 yOffset = .01f;
+                 yOffset = .02f;
                 
             }
 
             counter++;
-            if(counter>50)
+            if(counter>10)
             {
                 counter = 0;
                 up = !up;
