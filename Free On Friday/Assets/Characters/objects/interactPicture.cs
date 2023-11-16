@@ -9,7 +9,7 @@ public class interactPicture : interactable
     protected GameObject UIPic;
     // Start is called before the first frame update
     protected bool looking = false;
-    public bool picked;
+    public bool picked = false;
     protected override void onInteract()
     {
         if (!interacted)

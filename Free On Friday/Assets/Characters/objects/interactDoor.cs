@@ -50,7 +50,7 @@ public class interactDoor : interactable
             }
 
             counter++;
-            if(counter>10)
+            if(counter>50)
             {
                 counter = 0;
                 up = !up;
