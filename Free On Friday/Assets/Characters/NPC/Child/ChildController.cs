@@ -33,6 +33,7 @@ public class ChildController : MonoBehaviour
 
     public void Detected()
     {
+        GetComponent<AIDestinationSetter>().enabled = true;
         GetComponent<AIDestinationSetter>().target = parent.transform;
         detected = true;
     }
