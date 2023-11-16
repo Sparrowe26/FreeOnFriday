@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -16,6 +18,13 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPaused)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                TitleScreen();
+            }
+        }
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (isPaused)
@@ -41,5 +50,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
+    }
+
+    public void TitleScreen()
+    {
+        SceneManager.LoadScene(0);
     }
 }
