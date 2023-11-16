@@ -17,7 +17,7 @@ public class ChildController : MonoBehaviour
 
     private void Start()
     {
-        parent = GameObject.Find("parent");
+        parent = GameObject.Find("Adult");
     }
 
     private void Update()
