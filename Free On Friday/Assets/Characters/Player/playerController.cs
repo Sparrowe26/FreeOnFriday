@@ -122,16 +122,18 @@ public class playerController : MonoBehaviour
 
 
     //if player is detected update what is needed
-    public void PlayerDetected(int amount)
+    public bool PlayerDetected(int amount)
     {
         GameManager.gameManager._playerDetection.DectectionUnit(amount);
         _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
-        if(GameManager.gameManager._playerDetection.Detect ==100)
+        if (GameManager.gameManager._playerDetection.Detect == 100)
         {
-            this.gameObject.transform.position = new Vector3(-4.74f, -2.69f, -2.0f);
             GameManager.gameManager._playerDetection.Detect = 0;
             _detectionbar.SetDetection(GameManager.gameManager._playerDetection.Detect);
+            return true;
         }
+        else
+            return false;
     }
  
 

@@ -49,7 +49,10 @@ public class FieldOfView : MonoBehaviour
         isDetecting = false;
         FindVisibleTargets();
         if (isDetecting)
-            player.GetComponent<playerController>().PlayerDetected(1);
+            if (player.GetComponent<playerController>().PlayerDetected(1))
+            {
+                GetComponent<ChildController>().Detected();
+            }
     }
 
     /// <summary>
@@ -60,6 +63,11 @@ public class FieldOfView : MonoBehaviour
         // clear list and set color to white every new frame
         visibleTargets.Clear();
         spriteRend.color = Color.white;
+        Material[] materials = meshRend.materials;
+        materials[1] = matUndetect;
+        meshRend.materials = materials;
+        isDetecting = false;
+
         // add all targets within a circle of radius viewdst around npc
         Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewDst, targetMask);
 
@@ -84,19 +92,14 @@ public class FieldOfView : MonoBehaviour
                     // add to list of visible targets
                     visibleTargets.Add(target);
                     spriteRend.color = Color.red;
+
+                    // increase detection meter
                     isDetecting = true;
 
                     // if collided with a valid target change fov color
-                    Material[] materials = meshRend.materials;
+                    materials = meshRend.materials;
                     materials[1] = matDetect;
                     meshRend.materials = materials;
-                }
-                else
-                { // if no longer detected
-                    Material[] materials = meshRend.materials;
-                    materials[1] = matUndetect;
-                    meshRend.materials = materials;
-                    isDetecting = false;
                 }
             }
         }
