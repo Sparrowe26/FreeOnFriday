@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class playerController : MonoBehaviour
 {
-    Vector2 movementInput;
+    public Vector2 movementInput;
     Rigidbody2D rb;
     public float offset = 0.05f;
     public float moveSpeed = 5f;
