@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -51,7 +52,14 @@ public class FieldOfView : MonoBehaviour
         if (isDetecting)
             if (player.GetComponent<playerController>().PlayerDetected(1))
             {
-                GetComponentInParent<ChildController>().Detected();
+                try
+                {
+                    GetComponentInParent<ChildController>().Detected();
+                }
+                catch
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
             }
     }
 
