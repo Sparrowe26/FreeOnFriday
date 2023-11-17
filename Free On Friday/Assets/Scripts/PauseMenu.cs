@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (isPaused)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.M))
             {
                 TitleScreen();
             }
