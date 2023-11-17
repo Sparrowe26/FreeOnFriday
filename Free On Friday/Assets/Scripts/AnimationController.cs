@@ -40,6 +40,7 @@ public class AnimationController : MonoBehaviour
 
     private void Update()
     {
-            onMovement();
+
+        onMovement();
     }
 }
