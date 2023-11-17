@@ -17,7 +17,7 @@ public class ChildController : MonoBehaviour
 
     private void Start()
     {
-        parent = GameObject.Find("parent");
+        parent = GameObject.Find("Adult");
     }
 
     private void Update()
@@ -33,6 +33,7 @@ public class ChildController : MonoBehaviour
 
     public void Detected()
     {
+        GetComponent<AIDestinationSetter>().enabled = true;
         GetComponent<AIDestinationSetter>().target = parent.transform;
         detected = true;
     }

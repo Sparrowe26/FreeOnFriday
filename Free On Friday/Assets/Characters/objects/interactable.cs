@@ -20,15 +20,7 @@ public class interactable : collidable
                 text.SetActive(true);
             if (Input.GetKey(KeyCode.E))
             {
-
-              
-               
-          
-                
                     onInteract();
-                
-
-                
             }
         }
         
