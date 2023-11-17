@@ -9,6 +9,7 @@ public class ChildController : MonoBehaviour
     public float viewAngle;
     private bool detected = false;
     private GameObject parent;
+    private double delay;
 
     public Vector3 DirFromAngle(float angleDeg)
     {
@@ -24,7 +25,8 @@ public class ChildController : MonoBehaviour
     {
         if (detected)
         {
-            if (GetComponent<IAstarAI>().reachedDestination)
+            delay += Time.deltaTime;
+            if (GetComponent<IAstarAI>().reachedDestination && delay >= 2)
             {
                 Debug.Log("finished");
                 GameObject.Find("Adult").GetComponent<FieldOfView>().enabled = true;
