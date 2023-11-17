@@ -28,11 +28,10 @@ public class InteractAdult : interactable
     {
         if (collidedObj.name == "StandinPlayer")
         {
-            if (text != null)
+            if (text != null && !possessed)
                 text.SetActive(true);
             if (Input.GetKey(KeyCode.Q))
             {
-
                 onInteract();
             }
         }
@@ -42,7 +41,8 @@ public class InteractAdult : interactable
     {
         if (!interacted)
         {
-            if(!possessed)
+            
+            if (!possessed)
             {
                 Player.GetComponent<SpriteRenderer>().sprite = this.spriteRend.sprite;
                 Player.gameObject.transform.position = this.gameObject.transform.position;
@@ -61,6 +61,7 @@ public class InteractAdult : interactable
                 possessed = false;
                 Player.GetComponent<playerController>().possessing = false;
                 Invoke("interactDelay", .2f);
+                
             }
         }
        
