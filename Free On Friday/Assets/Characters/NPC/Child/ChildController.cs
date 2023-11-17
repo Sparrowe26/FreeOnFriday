@@ -27,6 +27,7 @@ public class ChildController : MonoBehaviour
             if (GetComponent<IAstarAI>().reachedDestination)
             {
                 Debug.Log("finished");
+                GameObject.Find("Adult").GetComponent<FieldOfView>().enabled = true;
             }
         }
     }
