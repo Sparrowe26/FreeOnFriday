@@ -12,7 +12,7 @@ public class FieldOfView : MonoBehaviour
     public LayerMask obstabcleMask;
 
     public List<Transform> visibleTargets = new List<Transform>();
-    private SpriteRenderer spriteRend;
+    //private SpriteRenderer spriteRend;
 
     public float meshRes;
     public MeshFilter viewMeshFilter;
@@ -31,7 +31,7 @@ public class FieldOfView : MonoBehaviour
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
-        spriteRend = GetComponent<SpriteRenderer>();
+        //spriteRend = GetComponent<SpriteRenderer>();
         meshRend = viewMeshFilter.GetComponent<MeshRenderer>();
         Material[] materials = meshRend.materials;
         matUndetect = materials[1];
@@ -51,7 +51,7 @@ public class FieldOfView : MonoBehaviour
         if (isDetecting)
             if (player.GetComponent<playerController>().PlayerDetected(1))
             {
-                GetComponent<ChildController>().Detected();
+                GetComponentInParent<ChildController>().Detected();
             }
     }
 
@@ -62,7 +62,7 @@ public class FieldOfView : MonoBehaviour
     {
         // clear list and set color to white every new frame
         visibleTargets.Clear();
-        spriteRend.color = Color.white;
+        //spriteRend.color = Color.white;
         Material[] materials = meshRend.materials;
         materials[1] = matUndetect;
         meshRend.materials = materials;
@@ -91,7 +91,7 @@ public class FieldOfView : MonoBehaviour
                 {
                     // add to list of visible targets
                     visibleTargets.Add(target);
-                    spriteRend.color = Color.red;
+                    //spriteRend.color = Color.red;
 
                     // increase detection meter
                     isDetecting = true;
