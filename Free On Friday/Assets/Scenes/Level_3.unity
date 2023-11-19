@@ -2399,7 +2399,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 0}
   UIPic: {fileID: 0}
-  picked: 0
+  picked: 1
 --- !u!61 &392161154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20037,7 +20037,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 0}
-  pic: {fileID: 656322224}
+  pic: {fileID: 392161152}
 --- !u!1 &1384152317
 GameObject:
   m_ObjectHideFlags: 0
