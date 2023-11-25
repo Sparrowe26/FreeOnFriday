@@ -11,13 +11,16 @@ public class interactKid : interactable
 
     protected override void onInteract()
     {
+       
         if (!interacted)
         {
             if (pic.GetComponent<interactPicture>().picked)
             {
+                Debug.Log("picked");
 
-                spriteRend.gameObject.SetActive(false);
+                this.spriteRend.gameObject.SetActive(false);
                 interacted = true;
+                
             }
 
         }
