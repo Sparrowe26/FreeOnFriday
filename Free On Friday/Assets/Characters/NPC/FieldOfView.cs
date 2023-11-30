@@ -77,37 +77,41 @@ public class FieldOfView : MonoBehaviour
         isDetecting = false;
 
         // add all targets within a circle of radius viewdst around npc
-        Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewDst, targetMask);
+        Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewDst, obstabcleMask);
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
-            // take each transform for all targets in radius
-            Transform target = targetsInViewRadius[i].transform;
-            // issue with some hitboxes being too long as the player transform.position is too high on the model when compared to the hitbox
-            // BoxCollider2D targetCol = targetsInViewRadius[i].GetComponent<BoxCollider2D>();
-            BoxCollider2D targetCollider = target.GetComponent<BoxCollider2D>();
-            Vector2 dirToTarget = ((target.position + ((Vector3)targetCollider.offset / 2)) - transform.position).normalized;
-            float dstToTarget = Vector2.Distance(transform.position, (target.position + (Vector3)targetCollider.offset));
-
-            // check if it is in front of npc viewangle
-            if (Vector2.Angle(transform.up, dirToTarget) < viewAngle / 2)
+            if (targetsInViewRadius[i].transform == player.GetComponent<Transform>())
             {
-                // raycast only works to a point, may need to switch it up to work with an entire hitbox for the whole character
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstabcleMask);
+                // take each transform for all targets in radius
+                Transform target = targetsInViewRadius[i].transform;
+                // issue with some hitboxes being too long as the player transform.position is too high on the model when compared to the hitbox
+                // BoxCollider2D targetCol = targetsInViewRadius[i].GetComponent<BoxCollider2D>();
+                BoxCollider2D targetCollider = target.GetComponent<BoxCollider2D>();
+                Vector2 dirToTarget = ((target.position + ((Vector3)targetCollider.offset / 2)) - transform.position).normalized;
+                float dstToTarget = Vector2.Distance(transform.position, (target.position + (Vector3)targetCollider.offset));
 
-                if (!hit.collider && !player.GetComponent<playerController>().possessing)
+                // check if it is in front of npc viewangle
+                if (Vector2.Angle(transform.up, dirToTarget) < viewAngle / 2)
                 {
-                    // add to list of visible targets
-                    visibleTargets.Add(target);
-                    //spriteRend.color = Color.red;
+                    // raycast only works to a point, may need to switch it up to work with an entire hitbox for the whole character
+                    RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstabcleMask);
 
-                    // increase detection meter
-                    isDetecting = true;
+                    if (hit.transform == player.GetComponent<Transform>() && !player.GetComponent<playerController>().possessing)
+                    {
+                        // add to list of visible targets
+                        visibleTargets.Add(target);
+                        //spriteRend.color = Color.red;
 
-                    // if collided with a valid target change fov color
-                    materials = meshRend.materials;
-                    materials[1] = matDetect;
-                    meshRend.materials = materials;
+                        // increase detection meter
+                        isDetecting = true;
+
+                        // if collided with a valid target change fov color
+                        materials = meshRend.materials;
+                        materials[1] = matDetect;
+                        meshRend.materials = materials;
+                    }
+
                 }
             }
         }
