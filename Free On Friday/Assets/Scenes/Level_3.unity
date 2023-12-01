@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 98885546}
   - component: {fileID: 98885545}
   m_Layer: 0
-  m_Name: picture sprite
+  m_Name: picture sprite 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -556,7 +556,7 @@ Transform:
   m_GameObject: {fileID: 98885543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: -2.71, z: 0}
+  m_LocalPosition: {x: 0.22, y: -0.17, z: 0}
   m_LocalScale: {x: 0.2, y: 0.21166185, z: 0.20603923}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -635,7 +635,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 0}
   UIPic: {fileID: 56673425}
-  picked: 0
+  picked: 1
 --- !u!212 &98885547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -720,7 +720,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 0}
-  pic: {fileID: 392161152}
+  pic: {fileID: 885936856}
 --- !u!1 &138176252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,7 +2400,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 0}
   UIPic: {fileID: 0}
-  picked: 0
+  picked: 1
 --- !u!61 &392161154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2507,7 +2507,7 @@ Transform:
   m_GameObject: {fileID: 392161152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.6, y: 6.43, z: 0}
+  m_LocalPosition: {x: -5.6, y: 4.11, z: 0}
   m_LocalScale: {x: 1.0301961, y: 0.97343576, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8055,7 +8055,7 @@ Transform:
   m_GameObject: {fileID: 656322224}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.24, y: 0.78, z: 0}
+  m_LocalPosition: {x: -9.91, y: -0.12, z: 0}
   m_LocalScale: {x: 1.0301961, y: 0.97343576, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9533,7 +9533,7 @@ GameObject:
   - component: {fileID: 885936859}
   - component: {fileID: 885936860}
   m_Layer: 0
-  m_Name: picture sprite
+  m_Name: picture sprite 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9548,7 +9548,7 @@ Transform:
   m_GameObject: {fileID: 885936856}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.86, y: -1.12, z: 0}
+  m_LocalPosition: {x: -0.14, y: 0.05, z: 0}
   m_LocalScale: {x: 0.2, y: 0.21166185, z: 0.20603923}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9634,7 +9634,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 0}
   UIPic: {fileID: 56673425}
-  picked: 1
+  picked: 0
 --- !u!61 &885936860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19516,7 +19516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.55, y: 1.4}
+  m_AnchoredPosition: {x: 3.62, y: 1.4}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1054613343
@@ -20922,7 +20922,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 0}
-  pic: {fileID: 392161152}
+  pic: {fileID: 98885543}
 --- !u!1 &1384152317
 GameObject:
   m_ObjectHideFlags: 0
