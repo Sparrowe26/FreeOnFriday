@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour
         redKey.SetActive(false);
         blueKey.SetActive(false);
         startKey.SetActive(false);
+
     }
 
     // Update is called once per frame
