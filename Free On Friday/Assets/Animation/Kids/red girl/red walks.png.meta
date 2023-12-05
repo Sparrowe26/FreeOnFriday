@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64c163597bd7753469faee4c6768e34e
+guid: 9df515fac5b78a34aa137c97f2e95cc8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blue child_0
+      name: red walks_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 261c1762d4e36344090816bccd73e469
-      internalID: -949296701
+      spriteID: 419cd8947a0bfab4fbf95d49c118e226
+      internalID: -1844511740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_1
+      name: red walks_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30aca13603586cb4f981d12c98ecdef1
-      internalID: 543064749
+      spriteID: bd732b01249b6f448a7e72214d31f9e3
+      internalID: -410989687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_2
+      name: red walks_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45737e1f6ff2e2c43919520d42eb3f66
-      internalID: -165495199
+      spriteID: 14834590040ae4544b1cb07dd9af793c
+      internalID: 1243938148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_3
+      name: red walks_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ba23d7b921318f4ab817fdf64c3e43b
-      internalID: 1176292273
+      spriteID: 9be7a119d0b03384c8c880b1e5a4c681
+      internalID: 130391338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_4
+      name: red walks_4
       rect:
         serializedVersion: 2
         x: 0
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e550d619385bea948af763603e4b1a5d
-      internalID: -418037770
+      spriteID: da3a65a1199d8ce4e92911b83f0cfaee
+      internalID: -114607907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_5
+      name: red walks_5
       rect:
         serializedVersion: 2
         x: 32
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0ce7f519f3a16c44ad4ab0c53fdae3d
-      internalID: -933099737
+      spriteID: 3ee3d93dfe5060e42aa571159ac0b6be
+      internalID: -1601739573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_6
+      name: red walks_6
       rect:
         serializedVersion: 2
         x: 64
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ba0a9a8c8bb29c4eb42e395d7f04b57
-      internalID: 1094331075
+      spriteID: 68d11ace812ac8643b56cf3dc4dd3346
+      internalID: 1721371717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_7
+      name: red walks_7
       rect:
         serializedVersion: 2
         x: 96
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b012617e318d11f43a544bd50fc679da
-      internalID: 1028932083
+      spriteID: 886ca02caf928bc4ea046fb5338b3810
+      internalID: -520224441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_8
+      name: red walks_8
       rect:
         serializedVersion: 2
         x: 0
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 369fe58838431ef47a93626c92e2998d
-      internalID: 1655492318
+      spriteID: 68c50f3a39ca50f4ea526931c400b661
+      internalID: 1216688231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_9
+      name: red walks_9
       rect:
         serializedVersion: 2
         x: 32
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a62230807a9d66f469d44a22c23b0825
-      internalID: 1275839367
+      spriteID: efda4e373470e3d4db74022ce1a06de5
+      internalID: -1847839822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_10
+      name: red walks_10
       rect:
         serializedVersion: 2
         x: 64
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08ec5d251d543f44784c9627f38bade3
-      internalID: -1460834707
+      spriteID: 8f3e159fa5d5a9144ade97d27f4fdeb8
+      internalID: 622857873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_11
+      name: red walks_11
       rect:
         serializedVersion: 2
         x: 96
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adf165f024b1d4b4294829d9ee041745
-      internalID: -1735346316
+      spriteID: 4453526ead4951e49966f3d2aa60db53
+      internalID: -1807590103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_12
+      name: red walks_12
       rect:
         serializedVersion: 2
         x: 0
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac5e465b572ca904fae7f40501ffb584
-      internalID: 1880311684
+      spriteID: 4771ac116b1f515488ba6956f2ef30d5
+      internalID: 1788988949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_13
+      name: red walks_13
       rect:
         serializedVersion: 2
         x: 32
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713fdec258bb7da40be38fd5cd4a2288
-      internalID: -1134353806
+      spriteID: c2162c1ac9d3eb6409a614811ee0028f
+      internalID: 1191278609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_14
+      name: red walks_14
       rect:
         serializedVersion: 2
         x: 64
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0e28bb628c201a4099c41fc4a234186
-      internalID: -1754080105
+      spriteID: 3e0a0c6828ca2974ebe3b4157efaea32
+      internalID: -550797164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue child_15
+      name: red walks_15
       rect:
         serializedVersion: 2
         x: 96
@@ -439,8 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b491141ca484bfb4abab12b9753ca147
-      internalID: 115042280
+      spriteID: 8186c2050ae7677449929df5e7f833fa
+      internalID: 399187010
       vertices: []
       indices: 
       edges: []
@@ -456,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blue child_0: -949296701
-      blue child_1: 543064749
-      blue child_10: -1460834707
-      blue child_11: -1735346316
-      blue child_12: 1880311684
-      blue child_13: -1134353806
-      blue child_14: -1754080105
-      blue child_15: 115042280
-      blue child_2: -165495199
-      blue child_3: 1176292273
-      blue child_4: -418037770
-      blue child_5: -933099737
-      blue child_6: 1094331075
-      blue child_7: 1028932083
-      blue child_8: 1655492318
-      blue child_9: 1275839367
+      red walks_0: -1844511740
+      red walks_1: -410989687
+      red walks_10: 622857873
+      red walks_11: -1807590103
+      red walks_12: 1788988949
+      red walks_13: 1191278609
+      red walks_14: -550797164
+      red walks_15: 399187010
+      red walks_2: 1243938148
+      red walks_3: 130391338
+      red walks_4: -114607907
+      red walks_5: -1601739573
+      red walks_6: 1721371717
+      red walks_7: -520224441
+      red walks_8: 1216688231
+      red walks_9: -1847839822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

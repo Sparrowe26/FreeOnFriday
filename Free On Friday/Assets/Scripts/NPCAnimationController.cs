@@ -27,7 +27,7 @@ public class NPCAnimationController : MonoBehaviour
         movement = aiPath.velocity;
         Console.WriteLine(movement);
 
-       if (movement.x != 0 || movement.y != 0)
+       if (movement.x >= 0.25 || movement.y >= 0.25)
        {
             animator.SetFloat("X", movement.x);
             animator.SetFloat("Y", movement.y);
