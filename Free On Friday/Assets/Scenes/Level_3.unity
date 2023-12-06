@@ -1471,7 +1471,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1347911910}
   key: {fileID: 1673088088}
   isOpen: 0
@@ -2513,7 +2513,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 570288470}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -8668,7 +8668,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 709248081}
   key: {fileID: 1172265222}
   isOpen: 0
@@ -9396,7 +9396,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 570288470}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -19790,7 +19790,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1117949268}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -21135,7 +21135,7 @@ PrefabInstance:
     - target: {fileID: 1975650442055508314, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
       propertyPath: ogSprite
       value: 
-      objectReference: {fileID: 21300000, guid: ccc94b75a39df3944a1e44c9a6c0137b, type: 3}
+      objectReference: {fileID: 1339310757, guid: 405f88ecc25a2f541b80b2bdff269982, type: 3}
     - target: {fileID: 1975650442055508314, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -21143,6 +21143,10 @@ PrefabInstance:
     - target: {fileID: 1975650442055508314, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
       propertyPath: moveSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975650442055508314, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
+      propertyPath: possessing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1975650442055508314, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
       propertyPath: GameoverText
@@ -21175,6 +21179,10 @@ PrefabInstance:
     - target: {fileID: 3028971530528465660, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
       propertyPath: m_Offset.y
       value: 0.07171583
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028971530528465660, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3486007561650952553, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
       propertyPath: m_LocalScale.x
@@ -21244,6 +21252,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9102183090103896289, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1339310757, guid: 405f88ecc25a2f541b80b2bdff269982, type: 3}
     - target: {fileID: 9102183090103896289, guid: 52251b3357ccb174bbc209b88179a2ed, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -21470,7 +21482,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1117949268}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -25413,7 +25425,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 709248081}
   key: {fileID: 1172265222}
   isOpen: 0
@@ -28870,7 +28882,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1347911910}
   key: {fileID: 1673088088}
   isOpen: 0
