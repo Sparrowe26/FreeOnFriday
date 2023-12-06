@@ -1466,7 +1466,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1347911910}
   key: {fileID: 1673088088}
   isOpen: 0
@@ -2508,7 +2508,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 570288470}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -8663,7 +8663,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 709248081}
   key: {fileID: 1172265222}
   isOpen: 0
@@ -9391,7 +9391,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 570288470}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -19774,7 +19774,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1117949268}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -21461,7 +21461,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1117949268}
   key: {fileID: 1645483886}
   isOpen: 0
@@ -25404,7 +25404,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 709248081}
   key: {fileID: 1172265222}
   isOpen: 0
@@ -28827,7 +28827,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  text: {fileID: 247935580}
+  text: {fileID: 1911847483}
   doorObject: {fileID: 1347911910}
   key: {fileID: 1673088088}
   isOpen: 0
