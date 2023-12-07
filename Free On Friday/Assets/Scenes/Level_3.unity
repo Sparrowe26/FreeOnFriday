@@ -170,7 +170,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   text: {fileID: 850136368}
   possessed: 0
-  ogSprite: {fileID: 21300000, guid: ccc94b75a39df3944a1e44c9a6c0137b, type: 3}
+  ogSprite: {fileID: 1339310757, guid: 405f88ecc25a2f541b80b2bdff269982, type: 3}
 --- !u!61 &35715878
 BoxCollider2D:
   m_ObjectHideFlags: 0
