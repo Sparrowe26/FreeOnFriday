@@ -7,6 +7,9 @@ public class InteractAdult : interactable
 {
     public bool possessed = false;
     [SerializeField] public Sprite ogSprite;
+    private const float _minimumHeldDuration = 0.25f;
+    private float _spacePressedTime = 0;
+    private bool _spaceHeld = false;
 
     protected override void Update()
     {
@@ -29,10 +32,29 @@ public class InteractAdult : interactable
         if (collidedObj.name == "StandinPlayer")
         {
             if (text != null && !possessed)
+            {
                 text.SetActive(true);
+            }
+
             if (Input.GetKey(KeyCode.Q))
             {
-                onInteract();
+                _spacePressedTime = Time.timeSinceLevelLoad;
+                _spaceHeld = false;
+            }
+            else if (Input.GetKeyUp(KeyCode.Q))
+            {
+                if (!_spaceHeld)
+                {
+                    onInteract();
+                }
+            }
+
+            if (Input.GetKey(KeyCode.Q))
+            {
+                if (Time.timeSinceLevelLoad - _spacePressedTime > _minimumHeldDuration)
+                {
+                    _spaceHeld = true;
+                }
             }
         }
     }
