@@ -19560,12 +19560,15 @@ MonoBehaviour:
   pic: {fileID: 98885543}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &1378913400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7231149135440358370, guid: 3a9201c970e397149a3989e0b75fc508, type: 3}
   m_PrefabInstance: {fileID: 1378913395}
   m_PrefabAsset: {fileID: 0}
 =======
+=======
+>>>>>>> parent of aac6b84 (Added red girl animations, and added children scared images.)
 =======
 >>>>>>> parent of aac6b84 (Added red girl animations, and added children scared images.)
 --- !u!1 &1384152317
@@ -27109,8 +27112,11 @@ SceneRoots:
   - {fileID: 74498477}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2134268998}
 =======
+=======
+>>>>>>> parent of aac6b84 (Added red girl animations, and added children scared images.)
 =======
 >>>>>>> parent of aac6b84 (Added red girl animations, and added children scared images.)
   - {fileID: 35715880}
