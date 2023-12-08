@@ -7,6 +7,7 @@ public class interactKid : interactable
 
 
     [SerializeField] protected GameObject pic;
+    [SerializeField] protected GameObject spriteHolder;
 
 
     protected override void onInteract()
@@ -19,6 +20,7 @@ public class interactKid : interactable
                 Debug.Log("picked");
 
                 this.spriteRend.gameObject.SetActive(false);
+                spriteHolder.SetActive(false);
                 interacted = true;
                 
             }

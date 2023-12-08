@@ -28,8 +28,7 @@ public class ChildController : MonoBehaviour
             delay += Time.deltaTime;
             if (GetComponent<IAstarAI>().reachedDestination && delay >= 2)
             {
-                Debug.Log("finished");
-                GameObject.Find("Adult").GetComponent<FieldOfView>().enabled = true;
+                GameObject.Find("Dresdin").SetActive(true);
             }
         }
     }
