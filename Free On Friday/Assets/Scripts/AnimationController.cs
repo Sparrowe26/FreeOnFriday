@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,11 +40,13 @@ public class AnimationController : MonoBehaviour
         if (playerController.possessing == true)
         {
             animator.SetBool("IsPossessing", true);
+            Console.WriteLine("is posessing");
         }
 
         else
         {
             animator.SetBool("IsPossessing", false);
+            Console.WriteLine("isnt posessing");
         }
 
     }
