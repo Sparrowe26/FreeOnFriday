@@ -25,8 +25,12 @@ public class interactDoor : interactable
 
     protected override void Update()
     {
-        if (text != null)
+        if (text != null && textBool)
+        {
             text.SetActive(false);
+            textBool = false;
+        }
+            
         colliderBox.OverlapCollider(filter, collidedObj);
         foreach (var o in collidedObj)
         {
