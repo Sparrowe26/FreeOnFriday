@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using static System.Net.Mime.MediaTypeNames;
+using Pathfinding;
 
 public class interactDoor : interactable
 {
@@ -110,9 +111,8 @@ public class interactDoor : interactable
                 interacted = true;
                 Invoke("interactDelay", .2f);
             }
-            
-            
         }
+
     }
 
    
