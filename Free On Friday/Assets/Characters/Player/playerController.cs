@@ -78,20 +78,6 @@ public class playerController : MonoBehaviour
             }
         }
 
-        // allows player to posses
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    if (possessed != null)
-        //    {
-        //        possessed.SetActive(true);
-        //        ResetSprite();
-        //    }
-        //    else
-        //    {
-
-        //    }
-        //}
-
     }
 
     private bool TryMove(Vector2 direction)

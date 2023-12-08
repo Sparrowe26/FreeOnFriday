@@ -28,7 +28,9 @@ public class ChildController : MonoBehaviour
             delay += Time.deltaTime;
             if (GetComponent<IAstarAI>().reachedDestination && delay >= 2)
             {
-                GameObject.Find("Dresdin").SetActive(true);
+                GameObject.Find("Dresdin").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.Find("Dresdin").GetComponent<Collider2D>().enabled = true;
+                GameObject.Find("Dresdin").GetComponent<AIDestinationSetter>().enabled = true;
             }
         }
     }
