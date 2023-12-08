@@ -30,6 +30,7 @@ public class AnimationController : MonoBehaviour
 
             animator.SetBool("IsWalking", true);
         }
+        
         else
         {
              animator.SetBool("IsWalking", false);
@@ -39,6 +40,7 @@ public class AnimationController : MonoBehaviour
         {
             animator.SetBool("IsPossessing", true);
         }
+
         else
         {
             animator.SetBool("IsPossessing", false);
