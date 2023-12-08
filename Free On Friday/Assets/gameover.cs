@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.SceneManagement;
 
 public class gameover : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class gameover : MonoBehaviour
     void Update()
     {
         if (GetComponent<IAstarAI>().reachedDestination)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Debug.Log("lose");
+        }
     }
 }
