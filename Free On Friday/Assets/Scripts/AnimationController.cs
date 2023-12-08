@@ -11,6 +11,7 @@ public class AnimationController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool isWalking;
+    private bool isPosessing;
 
     private void Awake()
     {
@@ -35,6 +36,14 @@ public class AnimationController : MonoBehaviour
             {
                 animator.SetBool("IsWalking", false);
             }
+            if (playerController.possessing == true)
+            {
+            isPosessing = true;
+            }
+            else
+        {
+            isPosessing = false;
+        }
 
     }
 
