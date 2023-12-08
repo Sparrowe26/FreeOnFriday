@@ -10,8 +10,6 @@ public class AnimationController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
-    private bool isWalking;
-    private bool isPosessing;
 
     private void Awake()
     {
@@ -25,24 +23,25 @@ public class AnimationController : MonoBehaviour
         //movement = playerController.Get<Vector2>();
         movement = playerController.movementInput;
       
-            if (movement.x != 0 || movement.y != 0)
-            {
-                animator.SetFloat("X", movement.x);
-                animator.SetFloat("Y", movement.y);
-
-                animator.SetBool("IsWalking", true);
-            }
-            else
-            {
-                animator.SetBool("IsWalking", false);
-            }
-            if (playerController.possessing == true)
-            {
-            isPosessing = true;
-            }
-            else
+        if (movement.x != 0 || movement.y != 0)
         {
-            isPosessing = false;
+            animator.SetFloat("X", movement.x);
+            animator.SetFloat("Y", movement.y);
+
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+             animator.SetBool("IsWalking", false);
+        }
+
+        if (playerController.possessing == true)
+        {
+            animator.SetBool("IsPossessing", true);
+        }
+        else
+        {
+            animator.SetBool("IsPossessing", false);
         }
 
     }
