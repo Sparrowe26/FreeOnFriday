@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     private string nextSceneTitle = "Onboarding";
     private string firstScene = "MainMenu";
     private string gameOver = "GameOver";
+    private string controls = "Controls";
     public void Play()
     {
         SceneManager.LoadScene(nextSceneTitle);
@@ -22,6 +23,11 @@ public class MainMenu : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene(gameOver);
+    }
+
+    public void Controls()
+    {
+        SceneManager.LoadScene(controls);
     }
 
     //Quit Game
