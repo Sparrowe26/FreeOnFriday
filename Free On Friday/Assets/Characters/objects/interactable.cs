@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class interactable : collidable
 {
-    
+    protected bool textBool = false;
    
    
     protected bool interacted = false;
@@ -18,6 +18,7 @@ public class interactable : collidable
         {
             if (text != null)
                 text.SetActive(true);
+                textBool = true;
             if (Input.GetKey(KeyCode.E))
             {
                     onInteract();
