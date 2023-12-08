@@ -55,5 +55,7 @@ public class PauseMenu : MonoBehaviour
     public void TitleScreen()
     {
         SceneManager.LoadScene(0);
+        isPaused = false;
+        Time.timeScale = 1;
     }
 }
